@@ -66,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
     class RepetitionOnClick implements View.OnClickListener {
         @Override
         public void onClick(View view) {
-            StringBuilder totalTimeString = new StringBuilder(20);
-
             if(view == cntUpBtn) {
                 ++cnt;
             }

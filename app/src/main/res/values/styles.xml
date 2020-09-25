@@ -9,4 +9,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="h1">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="h2">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="h3">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text1">
+        <item name="android:textSize">28sp</item>
+    </style>
 </resources>
