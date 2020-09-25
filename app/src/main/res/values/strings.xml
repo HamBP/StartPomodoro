@@ -1,4 +1,5 @@
 <resources>
+    <!-- MainActivity -->
     <string name="app_name">StartPomodoro</string>
     <string name="main_activity_name">포모도로 타이머</string>
     <string name="timer_option">설정</string>
@@ -11,4 +12,8 @@
     <string name="total_time_text">총 소요시간</string>
     <string name="total_time">30분</string>
     <string name="start">시작</string>
+
+    <!-- TimerActivity -->
+    <string name="state">집중</string>
+    <string name="end">종료</string>
 </resources>
