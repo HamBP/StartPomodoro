@@ -5,10 +5,10 @@
     <string name="half_hour_timer">30분 (25분 집중 / 5분 휴식)</string>
     <string name="one_hour_timer">1시간 (50분 집중 / 10분 휴식)</string>
     <string name="repetition">반복</string>
-    <string name="number">1</string>
+    <string name="repetition_cnt">1</string>
     <string name="repetition_up">+</string>
     <string name="repetition_down">-</string>
     <string name="total_time_text">총 소요시간</string>
     <string name="total_time">30분</string>
-    <string name="okay_btn">시작</string>
+    <string name="start">시작</string>
 </resources>

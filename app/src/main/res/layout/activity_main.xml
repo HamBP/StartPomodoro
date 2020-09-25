@@ -20,26 +20,22 @@
         android:textSize="24sp"
         android:text="@string/timer_option"/>
 
+    <!-- 1회 반복 시간 설정 -->
     <TextView
+        android:id="@+id/half_hour_option"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="24sp"
         android:text="@string/half_hour_timer"/>
 
-    <!-- 1회 반복 시간 설정 -->
     <TextView
+        android:id="@+id/one_hour_option"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="24sp"
         android:text="@string/one_hour_timer"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text=""/>
 
     <!-- 반복 횟수 설정 -->
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -56,14 +52,16 @@
             android:textSize="24sp"/>
 
         <TextView
+            android:id="@+id/repetition_cnt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center"
-            android:text="@string/number"
+            android:text="@string/repetition_cnt"
             android:textSize="24sp"/>
 
         <Button
+            android:id="@+id/btn_repetition_up"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -72,6 +70,7 @@
             android:textSize="24sp"/>
 
         <Button
+            android:id="@+id/btn_repetition_down"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -88,6 +87,7 @@
         android:textSize="24sp"/>
 
     <TextView
+        android:id="@+id/total_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -95,10 +95,11 @@
         android:textSize="24sp"/>
 
     <Button
+        android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/okay_btn"
+        android:text="@string/start"
         android:textSize="24sp"/>
 
 </LinearLayout>
