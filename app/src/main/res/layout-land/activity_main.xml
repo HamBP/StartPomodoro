@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/main_activity_name"
+        style="@style/h1"/>
+
+    <!-- 1회 반복 시간 설정 -->
+    <TextView
+        android:layout_marginTop="12dp"
+        android:id="@+id/half_hour_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/Text1"
+        android:text="@string/half_hour_timer"/>
+
+    <TextView
+        android:id="@+id/one_hour_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/Text1"
+        android:text="@string/one_hour_timer"/>
+
+    <!-- 반복 횟수 설정 -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/repetition"
+            style="@style/Text1"/>
+
+        <TextView
+            android:id="@+id/repetition_cnt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/repetition_cnt"
+            style="@style/Text1"/>
+
+        <Button
+            android:id="@+id/btn_repetition_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/repetition_up"
+            style="@style/Text1"/>
+
+        <Button
+            android:id="@+id/btn_repetition_down"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/repetition_down"
+            style="@style/Text1"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/total_time_text"
+        style="@style/h2"/>
+
+    <TextView
+        android:id="@+id/total_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/total_time"
+        style="@style/Text1"/>
+
+    <Button
+        android:layout_marginTop="12dp"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="32dp"
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/start"
+        style="@style/h3"/>
+
+</LinearLayout>
