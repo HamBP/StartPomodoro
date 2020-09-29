@@ -2,6 +2,9 @@ package org.algosketch.StartPomodoro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +19,9 @@ public class TimerActivity extends AppCompatActivity {
     TextView currentTime;
     TextView currentRepetition;
     Button finishBtn;
+
+    Uri notification;
+    Ringtone ringtone;
 
     int m, s;
     int cnt;
@@ -33,6 +39,9 @@ public class TimerActivity extends AppCompatActivity {
         finishBtn = findViewById(R.id.btn_finish);
 
         finishBtn.setOnClickListener(new FinishBtn());
+
+        notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        ringtone = RingtoneManager.getRingtone(getApplicationContext(), notification);
 
         final int cycleLength = getIntent().getIntExtra("cycleLength", 30);
         cnt = getIntent().getIntExtra("repetition", 1);
@@ -52,6 +61,7 @@ public class TimerActivity extends AppCompatActivity {
                     public void run() {
                         // 타이머가 0
                         if(m == 0 & s == 1) {
+                            ringtone.play();
                             // 집중
                             if(stateTextView.getText().toString().equals("집중")) {
                                 if(currentCnt == cnt) {
@@ -59,10 +69,14 @@ public class TimerActivity extends AppCompatActivity {
                                 }
                                 else {
                                     stateTextView.setText(R.string.state_break);
+                                    m = (cycleLength / 30) * 5;
+                                    s = 0;
                                 }
                             }
                             else { // 휴식
                                 ++currentCnt;
+                                m = (cycleLength / 30) *25;
+                                s = 0;
                             }
                         }
 
