@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     TextView totalTimeTextView;
     Button startBtn;
     int cnt = 1;
-    int cycleTime = 30;         // 단위 : 분
+    int cycleLength = 30;         // 단위 : 분
     int totalTimeMinute = 30;   // 단위 : 분
     TotalTime totalTime;
 
@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
             if(view == halfHourOption) {
                 halfHourOption.setTypeface(null, Typeface.BOLD);
                 oneHourOption.setTypeface(null, Typeface.NORMAL);
-                cycleTime = 30;
-                totalTimeMinute = cycleTime * cnt;
+                cycleLength = 30;
+                totalTimeMinute = cycleLength * cnt;
             }
             if(view == oneHourOption) {
                 oneHourOption.setTypeface(null, Typeface.BOLD);
                 halfHourOption.setTypeface(null, Typeface.NORMAL);
-                cycleTime = 60;
-                totalTimeMinute = cycleTime * cnt;
+                cycleLength = 60;
+                totalTimeMinute = cycleLength * cnt;
             }
 
             setTotalTimeTextView(totalTimeMinute);
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
             repetitionCnt.setText(Integer.toString(cnt));
 
-            totalTimeMinute = cycleTime * cnt;
+            totalTimeMinute = cycleLength * cnt;
             setTotalTimeTextView(totalTimeMinute);
         }
     }
@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainActivity.this, TimerActivity.class);
+            intent.putExtra("cycleLength", cycleLength);
+            intent.putExtra("repetition", cnt);
             startActivity(intent);
         }
     }
