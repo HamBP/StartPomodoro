@@ -14,6 +14,7 @@
     <string name="start">시작</string>
 
     <!-- TimerActivity -->
-    <string name="state">집중</string>
+    <string name="state_concentration">집중</string>
+    <string name="state_break">휴식</string>
     <string name="end">종료</string>
 </resources>
